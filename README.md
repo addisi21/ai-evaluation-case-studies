@@ -16,6 +16,20 @@ Anonymized case studies based on real AI data quality, RLHF, annotation QA, HR A
 
 See [proof-pack.md](proof-pack.md) for public, experience-derived evaluation examples with scenarios, model-output issues, scorecards, error labels, and reviewer feedback.
 
+## Runnable Artifact
+
+This repo now includes a small, runnable QA scoring artifact:
+
+- [data/case_scores.json](data/case_scores.json): structured case-study scores and error labels
+- [scripts/summarize_case_scores.py](scripts/summarize_case_scores.py): dependency-free Python summary script
+- [outputs/score-summary.md](outputs/score-summary.md): generated-style score summary for reviewer scanning
+
+Run locally:
+
+```bash
+python scripts/summarize_case_scores.py
+```
+
 ## Evaluation Method
 
 1. Define the user intent, business context, and risk level.
