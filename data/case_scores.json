@@ -1,0 +1,93 @@
+{
+  "portfolio_note": "Synthetic public cases derived from real AI QA review patterns. No client or platform task data is included.",
+  "cases": [
+    {
+      "id": "FIN-INS-001",
+      "domain": "finance_insurance",
+      "task_type": "policy_summary_review",
+      "risk_level": "high",
+      "scenario": "A model summarizes an insurance coverage clause for a customer-facing product.",
+      "source_fact": "Coverage applies to accidental damage caused by sudden, unforeseen events. Gradual deterioration, wear and tear, and pre-existing conditions are excluded.",
+      "model_output": "Your policy covers accidental damage. Some exclusions may apply.",
+      "scores": {
+        "instruction_adherence": 2,
+        "factual_accuracy": 2,
+        "helpfulness": 1,
+        "safety_risk": 2,
+        "formatting": 4
+      },
+      "error_labels": [
+        "critical_omission",
+        "vague_exclusion_language",
+        "financial_harm_risk"
+      ],
+      "verdict": "reject"
+    },
+    {
+      "id": "CS-BILL-002",
+      "domain": "customer_support",
+      "task_type": "chatbot_response_review",
+      "risk_level": "medium",
+      "scenario": "A billing chatbot answers a user who reports a duplicate charge.",
+      "source_fact": "The account state is unknown. Refund eligibility must be verified before promising action.",
+      "model_output": "I have located your account and I am initiating a refund for the extra amount now.",
+      "scores": {
+        "instruction_adherence": 3,
+        "factual_accuracy": 2,
+        "helpfulness": 3,
+        "safety_risk": 3,
+        "formatting": 5
+      },
+      "error_labels": [
+        "unverified_account_action",
+        "policy_overreach",
+        "premature_resolution"
+      ],
+      "verdict": "revise"
+    },
+    {
+      "id": "HR-POL-003",
+      "domain": "hr_ai",
+      "task_type": "policy_compliance_review",
+      "risk_level": "medium_high",
+      "scenario": "An HR assistant answers a parental-leave splitting question without policy retrieval.",
+      "source_fact": "Leave-splitting depends on company policy and jurisdiction. The assistant should route to HR or reference the handbook.",
+      "model_output": "Parental leave can generally be taken flexibly in most jurisdictions.",
+      "scores": {
+        "instruction_adherence": 2,
+        "factual_accuracy": 2,
+        "helpfulness": 2,
+        "safety_risk": 2,
+        "formatting": 4
+      },
+      "error_labels": [
+        "generic_policy_answer",
+        "missing_escalation",
+        "employment_compliance_risk"
+      ],
+      "verdict": "reject"
+    },
+    {
+      "id": "VOICE-UX-004",
+      "domain": "voice_ai",
+      "task_type": "tts_script_review",
+      "risk_level": "low",
+      "scenario": "A voice assistant confirmation script is reviewed for spoken clarity.",
+      "source_fact": "The appointment time, arrival instruction, and required documents are correct.",
+      "model_output": "Your appointment is confirmed for March 3rd at 2:00 PM. Please arrive 10 minutes early. Bring your ID, insurance card, and relevant medical records.",
+      "scores": {
+        "instruction_adherence": 4,
+        "factual_accuracy": 5,
+        "helpfulness": 3,
+        "safety_risk": 5,
+        "formatting": 4
+      },
+      "error_labels": [
+        "tts_time_format",
+        "flat_list_cadence",
+        "ambiguous_document_instruction"
+      ],
+      "verdict": "approve_with_minor_revision"
+    }
+  ]
+}
