@@ -1,0 +1,77 @@
+{
+  "portfolio_note": "Public, synthetic search relevance set based on real evaluator workflows. No proprietary search data or platform task content is included.",
+  "rating_scale": {
+    "excellent": "Directly satisfies the dominant user intent.",
+    "good": "Useful and related, with minor gaps.",
+    "fair": "Partially related but incomplete or indirect.",
+    "bad": "Wrong intent, unsafe, stale, or not useful."
+  },
+  "items": [
+    {
+      "id": "SR-001",
+      "locale": "en-US",
+      "query": "renew drivers license online texas",
+      "dominant_intent": "Find the official Texas license renewal service.",
+      "result_title": "Texas Driver License Renewal - Official State Portal",
+      "result_snippet": "Renew your Texas driver license online through the state portal.",
+      "rating": "excellent",
+      "issue_labels": [],
+      "rationale": "Official, task-completing result for the user's location and intent."
+    },
+    {
+      "id": "SR-002",
+      "locale": "en-US",
+      "query": "renew drivers license online texas",
+      "dominant_intent": "Find the official Texas license renewal service.",
+      "result_title": "Top 10 DMV Tips for Faster Renewal",
+      "result_snippet": "Blog article with general renewal advice and ads.",
+      "rating": "fair",
+      "issue_labels": ["not_official", "indirect_answer"],
+      "rationale": "Related to renewal but does not complete the user's task."
+    },
+    {
+      "id": "SR-003",
+      "locale": "en-NG",
+      "query": "best way to check waec result",
+      "dominant_intent": "Find a safe, official result-checking path.",
+      "result_title": "WAEC Result Checker Portal",
+      "result_snippet": "Official result checking portal with card and exam number guidance.",
+      "rating": "excellent",
+      "issue_labels": [],
+      "rationale": "Official result path and matches the local education context."
+    },
+    {
+      "id": "SR-004",
+      "locale": "en-NG",
+      "query": "best way to check waec result",
+      "dominant_intent": "Find a safe, official result-checking path.",
+      "result_title": "Free WAEC Result Checker PIN Generator",
+      "result_snippet": "Generate free pins instantly by entering your phone number.",
+      "rating": "bad",
+      "issue_labels": ["possible_scam", "privacy_risk", "not_official"],
+      "rationale": "Likely unsafe and asks for personal data without official backing."
+    },
+    {
+      "id": "SR-005",
+      "locale": "en-US",
+      "query": "symptoms of low blood sugar",
+      "dominant_intent": "Learn common symptoms and when to seek help.",
+      "result_title": "Low Blood Sugar: Symptoms and Treatment",
+      "result_snippet": "Medical reference explaining shakiness, sweating, confusion, and emergency signs.",
+      "rating": "good",
+      "issue_labels": ["medical_context"],
+      "rationale": "Useful overview, but evaluator should check authority and emergency framing."
+    },
+    {
+      "id": "SR-006",
+      "locale": "en-US",
+      "query": "python json schema validate example",
+      "dominant_intent": "Find a code example for validating JSON with a schema.",
+      "result_title": "JSON Schema Validation in Python",
+      "result_snippet": "Example using jsonschema.validate with schema and instance objects.",
+      "rating": "good",
+      "issue_labels": ["developer_query"],
+      "rationale": "Matches the developer intent and provides an implementation path."
+    }
+  ]
+}
